@@ -4,6 +4,7 @@ import SearchInput from './components/search-box/seach-input';
 import CardList from './components/card-list/card-list';
 import { get } from './utils/network'
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 export type Monster = {
   id: number;
@@ -36,7 +37,7 @@ function App() {
     setSearchQuery(query);
   }
   return (
-    <div className="App">
+    <div className="App text-center">
       <h1 className='app-title'>Monsters Rolodex</h1>
       <SearchInput placeholder="Search monsters" value={searchQuery} onChangeHandler={onChangeHandler} />
       <CardList monsters={filteredMonsters} />

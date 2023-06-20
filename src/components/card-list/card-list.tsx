@@ -7,9 +7,9 @@ type cardListProps = {
 }
 
 const CardList = ({ monsters }: cardListProps) => {
-    return <div className="card-list">
+    return <div className="card-list d-flex flex-wrap gap-4 justify-content-center mx-auto">
         {monsters.map(monster => {
-            return <CardView key={monster.id} monster={monster} />
+            return <CardView className='w-20' key={monster.id} monster={monster} />
         })}
     </div>
 }
