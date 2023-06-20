@@ -1,6 +1,10 @@
+import { Monster } from '../../App'
 import './card-view.css'
 
-const CardView = ({ monster }) => {
+type cardViewProps = {
+    monster: Monster
+}
+const CardView = ({ monster }: cardViewProps) => {
     const { id, name, email } = monster;
     return <div className='card-container'>
         <img src={`https://robohash.org/${id}?set=set2&size=180x180`} alt="monster" />
