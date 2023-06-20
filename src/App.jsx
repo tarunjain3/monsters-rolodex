@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import './App.css';
 
 import SearchInput from './components/search-box/seach-input';
+import CardList from './components/card-list/card-list';
 
 function App() {
 
@@ -16,12 +17,9 @@ function App() {
 
   return (
     <div className="App">
+      <h1 className='app-title'>Monsters Rolodex</h1>
       <SearchInput placeholder="Search monsters" />
-      <div className="moster-list">
-        {monsters.map(monster => {
-          return <div key={monster.id}>{monster.name}</div>
-        })}
-      </div>
+      <CardList monsters={monsters} />
     </div>
   );
 }
